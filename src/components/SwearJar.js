@@ -18,12 +18,12 @@ const SwearJar = ({ initialValue }) => {
   };
 
   return (
-    <div>
+    <div className='container justify-content-center'>
       <h1>Swear Jar</h1>
-      <button onClick={add}>Add</button>
-      <span data-testid="count">{count}</span>
-      <button onClick={remove}>Remove</button>
-    </div>
+      <button className="add" onClick={add}>+</button>
+      <span className ="count" data-testid="count">{count}</span>
+      <button className="remove" onClick={remove}>-</button>
+    </div> 
   );
 };
 

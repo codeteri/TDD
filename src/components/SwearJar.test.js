@@ -18,7 +18,7 @@ test("It should have an initial value of 0.", () => {
 
 test("It should increase the value correctly when add is pressed once.", () => {
   render(<SwearJar initialValue={1} />);
-  const AddButton = screen.getByText("Add");
+  const AddButton = screen.getByText("+");
   userEvent.click(AddButton);
   const count = screen.getByTestId("count");
   expect(count).toHaveTextContent(2);
@@ -26,7 +26,7 @@ test("It should increase the value correctly when add is pressed once.", () => {
 
 test("It should increase the value correctly when add is pressed twice.", () => {
   render(<SwearJar initialValue={1} />);
-  const AddButton = screen.getByText("Add");
+  const AddButton = screen.getByText("+");
   userEvent.click(AddButton);
   userEvent.click(AddButton);
   const count = screen.getByTestId("count");
@@ -35,7 +35,7 @@ test("It should increase the value correctly when add is pressed twice.", () => 
 
 test("It should decrease the value by one when remove is pressed once.", () => {
   render(<SwearJar initialValue={2} />);
-  const RemoveButton = screen.getByText("Remove");
+  const RemoveButton = screen.getByText("-");
   userEvent.click(RemoveButton);
   const count = screen.getByTestId("count");
   expect(count).toHaveTextContent(1);
@@ -43,7 +43,7 @@ test("It should decrease the value by one when remove is pressed once.", () => {
 
 test("It should decrease the value by two when remove is pressed twice.", () => {
   render(<SwearJar initialValue={2} />);
-  const RemoveButton = screen.getByText("Remove");
+  const RemoveButton = screen.getByText("-");
   userEvent.click(RemoveButton);
   userEvent.click(RemoveButton);
   const count = screen.getByTestId("count");
@@ -52,7 +52,7 @@ test("It should decrease the value by two when remove is pressed twice.", () => 
 
 test("It should not allow a negative number when the initial value is 0 and remove is clicked.", () => {
   render(<SwearJar initialValue={0} />);
-  const RemoveButton = screen.getByText("Remove");
+  const RemoveButton = screen.getByText("-");
   userEvent.click(RemoveButton);
   const count = screen.getByTestId("count");
   expect(count).toBeVisible();
@@ -60,7 +60,7 @@ test("It should not allow a negative number when the initial value is 0 and remo
 
 test("it should not allow a negative number when the intial value is 2 and remove is clicked 4 times", () => {
   render(<SwearJar initialValue={2} />);
-  const RemoveButton = screen.getByText("Remove");
+  const RemoveButton = screen.getByText("-");
   userEvent.click(RemoveButton);
   userEvent.click(RemoveButton);
   userEvent.click(RemoveButton);
