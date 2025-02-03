@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import SwearJar from './components/Swearjar';
+import SwearJar from './components/SwearJar';
 
 function App() {
   return (
