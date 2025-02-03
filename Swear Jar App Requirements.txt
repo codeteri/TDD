@@ -1,0 +1,4 @@
+1. The counter has an initial value of 0
+2. Clicking add will increase the value
+3. clicking remove will decrease the value
+4. Swear Count cannot be negative}
