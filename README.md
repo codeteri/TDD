@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Getting Started with my Swear Jar App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
